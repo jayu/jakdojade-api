@@ -64,10 +64,6 @@ const mergeCoords = (latlng) => {
 	return `${latlng.lat}:${latlng.lng}`
 }
 module.exports = { findRoutes : async (citySymbol, startPointCoords, endPointCoords, dateTime, isArrivalTime = false, routesCount=3) => {
-	if (citySymbol != "WROCLAW" && citySymbol != 'OPOLE') {
-		throw new Error("Undefined citySymbol " + citySymbol)
-	}
-	console.log(getDate(dateTime), getTime(dateTime))
 	return await find(citySymbol, mergeCoords(startPointCoords), mergeCoords(endPointCoords), getDate(dateTime), getTime(dateTime), isArrivalTime,routesCount)
 }}
 

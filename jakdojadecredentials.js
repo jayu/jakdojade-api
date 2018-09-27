@@ -68,21 +68,6 @@ return function(t) {
   return t
 }}
 
-// var req = {
-//   url : "https://jakdojade.pl/api/web/v1/routes?aac=true&alt=0&apv=&fc=51.122199:17.052164&location=51.12221:17.04990&region_symbol=WROCLAW&rt=false&t=optimal&tc=51.107933:17.038559&time=05.04.18+19:38",
-//   headers : {}
-// }
-
-// aaa(e,t,n,i,o)(req).then((v)=>{
-//   fetch(t.url, {
-//     headers : v.headers
-//   }).then(res => {
-//     return res.json()
-//   }).then(data => {
-//     console.log(data)
-//   })
-// })
-
 module.exports = {
   getHeaders : (url, userProfile, device_id) => {
     var e = { proposedLanguage : () => ("pl")}
